@@ -1,101 +1,447 @@
-# nonentity-qq.github.io
-Nonentity — Антидепрессивный | Разработчик
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Nonentity, также известный как Антидепрессивный. Профиль разработчика, цифровые проекты и ссылки на официальные аккаунты.">
-  <meta name="theme-color" content="#0b0d12">
-  <title>Nonentity — Антидепрессивный</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfilePage",
-    "name": "Nonentity — Антидепрессивный",
-    "mainEntity": {
-      "@type": "Person",
-      "name": "Nonentity",
-      "alternateName": ["Антидепрессивный", "Nonentity-qq"],
-      "description": "Интернет-псевдоним, связанный с программированием и цифровыми проектами."
-    }
-  }
-  </script>
+    <meta name="description" content="Nonentity — Антидепрессивный. Персональная страница разработчика, цифровые проекты и официальные профили.">
 
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      background: #0b0d12;
-      color: #e8eaf0;
-      font-family: Arial, sans-serif;
-      line-height: 1.7;
+    <title>Nonentity — Антидепрессивный</title>
+
+    <!-- Данные для поисковых систем -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "name": "Nonentity — Антидепрессивный",
+        "description": "Персональная страница Nonentity.",
+        "mainEntity": {
+            "@type": "Person",
+            "name": "Nonentity",
+            "alternateName": "Антидепрессивный",
+            "description": "Разработчик и автор цифровых проектов."
+        }
     }
-    main {
-      width: min(850px, 90%);
-      margin: 70px auto;
-    }
-    .tag {
-      color: #a78bfa;
-      letter-spacing: 3px;
-      font-size: 12px;
-      text-transform: uppercase;
-    }
-    h1 { font-size: clamp(42px, 8vw, 76px); margin: 12px 0; }
-    h2 { margin-top: 45px; }
-    .muted { color: #a3a8b8; }
-    .panel {
-      background: #131720;
-      border: 1px solid #292f3c;
-      border-radius: 16px;
-      padding: 24px;
-      margin-top: 24px;
-    }
-    a { color: #b9a5ff; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    footer { margin-top: 55px; color: #777f91; font-size: 13px; }
-  </style>
+    </script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #08090d;
+            color: #f1f1f5;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1000px, 90%);
+            margin: auto;
+        }
+
+        /* Верхняя панель */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(8, 9, 13, 0.85);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid #1c1f29;
+        }
+
+        nav {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+        }
+
+        .logo span {
+            color: #9b7cff;
+        }
+
+        .menu {
+            display: flex;
+            gap: 28px;
+            color: #9da2b3;
+            font-size: 14px;
+        }
+
+        .menu a:hover {
+            color: white;
+        }
+
+        /* Главный блок */
+
+        .hero {
+            min-height: 650px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px 0;
+        }
+
+        .label {
+            color: #9b7cff;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            font-size: clamp(55px, 10vw, 110px);
+            line-height: 0.95;
+            letter-spacing: -5px;
+            margin-bottom: 25px;
+        }
+
+        h1 span {
+            color: #9b7cff;
+        }
+
+        .subtitle {
+            max-width: 650px;
+            color: #a8adbd;
+            font-size: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 35px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            padding: 13px 22px;
+            border-radius: 10px;
+            background: #9b7cff;
+            color: white;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        .button.secondary {
+            background: #151821;
+            border: 1px solid #292e3a;
+        }
+
+        /* Секции */
+
+        section {
+            padding: 90px 0;
+            border-top: 1px solid #181b23;
+        }
+
+        .section-title {
+            font-size: 35px;
+            margin-bottom: 30px;
+        }
+
+        .section-description {
+            color: #a8adbd;
+            max-width: 700px;
+            margin-bottom: 30px;
+        }
+
+        /* Карточки */
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .card {
+            background: #11141b;
+            border: 1px solid #242833;
+            border-radius: 16px;
+            padding: 28px;
+            transition: 0.25s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: #51447d;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            font-size: 21px;
+        }
+
+        .card p {
+            color: #9da2b3;
+        }
+
+        /* Профили */
+
+        .profiles {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .profile {
+            padding: 14px 20px;
+            background: #11141b;
+            border: 1px solid #242833;
+            border-radius: 10px;
+            color: #c5c8d4;
+            transition: 0.2s;
+        }
+
+        .profile:hover {
+            border-color: #9b7cff;
+            color: white;
+        }
+
+        /* Footer */
+
+        footer {
+            padding: 50px 0;
+            color: #666c7d;
+            font-size: 13px;
+            text-align: center;
+            border-top: 1px solid #181b23;
+        }
+
+        /* Телефон */
+
+        @media (max-width: 700px) {
+
+            .menu {
+                display: none;
+            }
+
+            .hero {
+                min-height: 600px;
+            }
+
+            h1 {
+                font-size: 60px;
+                letter-spacing: -3px;
+            }
+
+            .subtitle {
+                font-size: 17px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+        }
+    </style>
 </head>
-<body>
-  <main>
-    <div class="tag">Personal profile</div>
-    <h1>Nonentity<span style="color:#a78bfa">.</span></h1>
-    <p class="muted">Также известен под псевдонимом «Антидепрессивный».</p>
 
-    <section class="panel">
-      <h2 style="margin-top:0">Кто такой Nonentity?</h2>
-      <p>
-        Nonentity — интернет-псевдоним, используемый в цифровой среде.
-        Эта страница предназначена для сбора публичной информации
-        о проектах, разработке и деятельности под данным псевдонимом.
-      </p>
-      <p>
-        Основные направления, информация о которых будет добавлена
-        по мере появления подтверждённых сведений: программирование,
-        разработка программного обеспечения и цифровые проекты.
-      </p>
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+
+            <a href="#" class="logo">
+                Nonentity<span>.</span>
+            </a>
+
+            <div class="menu">
+                <a href="#about">Обо мне</a>
+                <a href="#projects">Проекты</a>
+                <a href="#profiles">Профили</a>
+            </div>
+
+        </nav>
+    </div>
+</header>
+
+
+<main>
+
+    <!-- Главная -->
+
+    <div class="container">
+        <div class="hero">
+
+            <div class="label">
+                Персональная страница
+            </div>
+
+            <h1>
+                Nonentity<span>.</span>
+            </h1>
+
+            <p class="subtitle">
+                Также известен под псевдонимом
+                <strong>«Антидепрессивный»</strong>.
+                Разработка, программирование и цифровые проекты.
+            </p>
+
+            <div class="buttons">
+                <a href="#about" class="button">
+                    Узнать больше
+                </a>
+
+                <a href="#projects" class="button secondary">
+                    Проекты
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Обо мне -->
+
+    <section id="about">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Обо мне
+            </h2>
+
+            <p class="section-description">
+                Nonentity — интернет-псевдоним, используемый
+                в цифровой среде. Эта страница объединяет
+                публичную информацию о проектах, разработке
+                и деятельности под данным псевдонимом.
+            </p>
+
+            <div class="grid">
+
+                <div class="card">
+                    <h3>Программирование</h3>
+                    <p>
+                        Разработка программного обеспечения,
+                        эксперименты с кодом и создание
+                        цифровых проектов.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Цифровые проекты</h3>
+                    <p>
+                        Персональные проекты, веб-разработка
+                        и другие цифровые инициативы.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
     </section>
 
-    <h2>Проекты</h2>
-    <div class="panel">
-      <p class="muted">
-        Информация о проектах будет опубликована после добавления
-        их названий, описаний и ссылок.
-      </p>
-    </div>
 
-    <h2>Официальные профили</h2>
-    <div class="panel">
-      <p class="muted">
-        Ссылки на подтверждённые профили будут добавлены позднее.
-      </p>
-    </div>
+    <!-- Проекты -->
 
-    <footer>
-      Публичная профильная страница Nonentity.
-    </footer>
-  </main>
+    <section id="projects">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Проекты
+            </h2>
+
+            <p class="section-description">
+                Здесь будут размещаться публичные проекты
+                Nonentity с их описанием и ссылками.
+            </p>
+
+            <div class="card">
+
+                <h3>
+                    Скоро
+                </h3>
+
+                <p>
+                    Информация о проектах будет добавлена
+                    по мере публикации подтверждённых материалов.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Профили -->
+
+    <section id="profiles">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Официальные профили
+            </h2>
+
+            <p class="section-description">
+                Публичные профили и ссылки Nonentity.
+            </p>
+
+            <div class="profiles">
+
+                <a
+                    class="profile"
+                    href="https://github.com/nonentity-qq"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    GitHub
+                </a>
+
+                <a
+                    class="profile"
+                    href="https://github.com/nonentity-qq"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    nonentity-qq
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+    © 2026 Nonentity. Персональная страница.
+</footer>
+
 </body>
 </html>
