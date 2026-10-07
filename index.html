@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -91,6 +92,7 @@
 
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 70px;
         }
 
         body {
@@ -234,6 +236,27 @@
             margin-top: 25px;
         }
 
+        /* Аниме-фон для раздела "Обо мне" */
+
+        #about {
+            position: relative;
+            overflow: hidden;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(8, 9, 13, 0.20) 0%,
+                    rgba(8, 9, 13, 0.16) 40%,
+                    rgba(8, 9, 13, 0.40) 72%,
+                    rgba(8, 9, 13, 0.72) 100%
+                ),
+                url("anime-bg.jpg") center center / cover no-repeat;
+        }
+
+        #about .container {
+            position: relative;
+            z-index: 1;
+        }
+
         /* Карточки */
 
         .grid {
@@ -244,11 +267,12 @@
         }
 
         .card {
-            background: #11141b;
+            background: rgba(17, 20, 27, 0.90);
             border: 1px solid #242833;
             border-radius: 16px;
             padding: 28px;
             transition: 0.25s;
+            backdrop-filter: blur(6px);
         }
 
         .card:hover {
@@ -348,6 +372,15 @@
 
             section {
                 padding: 65px 0;
+            }
+
+            #about {
+                background:
+                    linear-gradient(
+                        rgba(8, 9, 13, 0.48),
+                        rgba(8, 9, 13, 0.78)
+                    ),
+                    url("anime-bg.jpg") center center / cover no-repeat;
             }
         }
     </style>
@@ -605,3 +638,4 @@
 
 </body>
 </html>
+```
